@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://d1l3iovtq8jg"]
+
+[ext_resource type="Script" uid="uid://dwxtvajpe6cce" path="res://scripts/LooseScreen.cs" id="1_236wu"]
+[ext_resource type="Texture2D" uid="uid://ba26a82wk2612" path="res://scenes/looseScreen.jpg" id="2_gxmny"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o44wm"]
+bg_color = Color(0.6, 0.6, 0.6, 0.337255)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4e747"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="LooseScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_236wu")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_gxmny")
+metadata/_edit_use_anchors_ = true
+
+[node name="ButtonQuit" type="Button" parent="."]
+layout_mode = 0
+anchor_left = 0.383854
+anchor_top = 0.641667
+anchor_right = 0.622396
+anchor_bottom = 0.738889
+offset_bottom = 6.10352e-05
+theme_override_styles/hover = SubResource("StyleBoxFlat_o44wm")
+theme_override_styles/normal = SubResource("StyleBoxFlat_4e747")
+metadata/_edit_use_anchors_ = true

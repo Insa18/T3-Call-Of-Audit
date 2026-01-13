@@ -1,0 +1,48 @@
+[gd_scene load_steps=2 format=3 uid="uid://co13l030rig3a"]
+
+[ext_resource type="Script" uid="uid://br7x2vc8e0ud5" path="res://scripts/EcranDeFin.cs" id="1_s6nxk"]
+
+[node name="EcranDeFin" type="Control" node_paths=PackedStringArray("ReportLabel")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_s6nxk")
+ReportLabel = NodePath("VBoxContainer/RichTextLabel")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.158472, 0.158472, 0.158472, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.169792
+anchor_top = 0.0111111
+anchor_right = 0.884375
+anchor_bottom = 0.835185
+metadata/_edit_use_anchors_ = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.427083
+anchor_top = 0.864815
+anchor_right = 0.604688
+anchor_bottom = 0.982407
+text = "Quitter"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="Button" to="." method="_on_quit_button_pressed"]

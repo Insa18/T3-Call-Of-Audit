@@ -1,0 +1,15 @@
+join bryan_expert_comptable center
+- Bonjour, comment allez-vous?
+	do Global.AddFear("-10")
+	do Global.UpdateFearBar()
+	bryan_expert_comptable: Bonjour, je vais bien merci ! Comment puis-je vous aider ?
+	Je voudrais jeter un oeil au relevé de vos achats sur l’exercice précédent, serait-ce possible ?
+	bryan_expert_comptable: Bien sûr, tenez. Si vous avez besoin d’autre chose, revenez me voir !
+	[signal arg="bryan_cool"]
+- Bonjour, donnez moi le relevé de tous vos achats sur l’exercice précédent
+	do Global.AddFear("25")
+	do Global.UpdateFearBar()
+	bryan_expert_comptable: Bonjour, voici le relevé, il manque quelques informations.
+	Merci, au revoir.
+	[signal arg="bryan_mauvais"]
+[signal arg="met_npc"]

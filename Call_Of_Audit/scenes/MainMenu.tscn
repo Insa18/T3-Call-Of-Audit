@@ -1,0 +1,124 @@
+[gd_scene load_steps=13 format=3 uid="uid://dwe6l2vcggktc"]
+
+[ext_resource type="Script" uid="uid://e8uq8i5242re" path="res://scripts/MainMenu.cs" id="1_0ykhv"]
+[ext_resource type="Texture2D" uid="uid://bkht0radq1tdi" path="res://scenes/menuIMG.png" id="2_0ykhv"]
+[ext_resource type="AudioStream" uid="uid://ctq2vmcsifq3h" path="res://music/Unbroken Road.mp3" id="3_2wh52"]
+[ext_resource type="Texture2D" uid="uid://c6dewwpdo4n23" path="res://scenes/settingsPanel.jpg" id="4_ow34m"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0ykhv"]
+bg_color = Color(0.6, 0.6, 0.6, 0.337255)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2wh52"]
+bg_color = Color(0.6, 0.6, 0.6, 0.337255)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ow34m"]
+bg_color = Color(0.6, 0.6, 0.6, 0.337255)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_826wr"]
+content_margin_top = 35.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mipys"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ucygd"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l72w3"]
+bg_color = Color(0.6, 0.6, 0.6, 0.329412)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ow34m"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0ykhv")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_0ykhv")
+
+[node name="ButtonPlay" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.429688
+anchor_top = 0.526852
+anchor_right = 0.605729
+anchor_bottom = 0.619444
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"FlatButton"
+theme_override_styles/hover = SubResource("StyleBoxFlat_0ykhv")
+metadata/_edit_use_anchors_ = true
+
+[node name="ButtonSettings" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.429688
+anchor_top = 0.639815
+anchor_right = 0.605729
+anchor_bottom = 0.732407
+theme_type_variation = &"FlatButton"
+theme_override_styles/hover = SubResource("StyleBoxFlat_2wh52")
+metadata/_edit_use_anchors_ = true
+
+[node name="ButtonQuit" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.429167
+anchor_top = 0.757407
+anchor_right = 0.605729
+anchor_bottom = 0.85
+theme_type_variation = &"FlatButton"
+theme_override_styles/hover = SubResource("StyleBoxFlat_ow34m")
+metadata/_edit_use_anchors_ = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_2wh52")
+volume_db = 24.0
+autoplay = true
+
+[node name="SettingsMenu" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_ow34m")
+metadata/_edit_use_anchors_ = true
+
+[node name="HSlider" type="HSlider" parent="SettingsMenu"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.342708
+anchor_top = 0.639815
+anchor_right = 0.652604
+anchor_bottom = 0.70463
+offset_bottom = 6.10352e-05
+theme_override_constants/center_grabber = 0
+theme_override_styles/slider = SubResource("StyleBoxFlat_826wr")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_mipys")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_ucygd")
+value = 50.0
+metadata/_edit_use_anchors_ = true
+
+[node name="ButtonBack" type="Button" parent="SettingsMenu"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.396875
+anchor_top = 0.815741
+anchor_right = 0.603646
+anchor_bottom = 0.927778
+theme_override_styles/hover = SubResource("StyleBoxFlat_l72w3")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ow34m")
+metadata/_edit_use_anchors_ = true

@@ -1,0 +1,20 @@
+- Bonjour, donnez moi toutes les informations concernat les emprunts de livres de l'année universitaire précédente.
+	do Global.AddFear("25")
+	do Global.UpdateFearBar()
+	Samuel_Lebot: Tenez. Au plaisir de ne pas vous revoir.
+	[signal arg="lebot_mauvais"]
+- Bonjour monsieur Lebot. Comment allez-vous?
+	do Global.AddFear("-10")
+	do Global.UpdateFearBar()
+	Samuel_Lebot: Bonjour, ca va très bien merci! Avant de répondre à vos questions, j'en ai une a vous poser!
+	Je vous écoute.
+	Samuel_Lebot: Seigneur des anneaux ou The Witcher?
+	- Seigneur des anneaux
+		do Global.AddFear("10")
+		do Global.UpdateFearBar()
+		Samuel_Lebot: Non non et non. Prenez les documents et hors de ma vue!
+		[signal arg="lebot_sda"]
+	- The Witcher
+		Samuel_Lebot: Ah je vois que vous avez du goût, voici les documents. Passez une bonne journée!
+		[signal arg="lebot_witcher"]
+[signal arg="met_npc"]

@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=3 uid="uid://fearbar123"]
+
+[ext_resource type="Script" uid="uid://c38xr86a8uhsc" path="res://scripts/FearBarUI.cs" id="1_e5ja7"]
+[ext_resource type="Texture2D" uid="uid://b58ilj6s8s58k" path="res://art/images/tete_de_mort.png" id="2_6fc7f"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e5ja7"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vrks0"]
+bg_color = Color(0.653617, 0.214944, 0.160463, 1)
+
+[node name="FearBar" type="Control"]
+z_index = 3
+layout_mode = 3
+anchor_left = 0.19
+anchor_top = 0.148
+anchor_right = 0.213
+anchor_bottom = 0.361
+offset_left = -0.800018
+offset_top = 0.160004
+offset_right = 0.0390015
+offset_bottom = 0.120026
+grow_horizontal = 0
+grow_vertical = 0
+mouse_filter = 2
+script = ExtResource("1_e5ja7")
+metadata/_edit_use_anchors_ = true
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.333341
+anchor_top = 0.239135
+anchor_right = 0.556
+anchor_bottom = 0.657
+offset_top = 96.999
+offset_right = 85.9796
+offset_bottom = 8.89001
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -1.5708
+theme_override_styles/background = SubResource("StyleBoxFlat_e5ja7")
+theme_override_styles/fill = SubResource("StyleBoxFlat_vrks0")
+value = 50.0
+show_percentage = false
+metadata/_edit_use_anchors_ = true
+
+[node name="symbole" type="Sprite2D" parent="."]
+position = Vector2(19, -62)
+scale = Vector2(0.0512693, 0.066406)
+texture = ExtResource("2_6fc7f")

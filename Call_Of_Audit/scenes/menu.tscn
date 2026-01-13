@@ -1,0 +1,99 @@
+[gd_scene load_steps=4 format=3 uid="uid://b1yirkpd7r73q"]
+
+[ext_resource type="Texture2D" uid="uid://xxuu7gnsfg1d" path="res://art/images/fondtest.jpeg" id="1_lti8b"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ouk20"]
+texture = ExtResource("1_lti8b")
+modulate_color = Color(0.85098, 0.756863, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vsb4k"]
+bg_color = Color(0.615834, 0.52531, 0.918783, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -577.0
+offset_top = -324.0
+offset_right = 570.0
+offset_bottom = 324.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxTexture_ouk20")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -110.0
+offset_top = -73.0
+offset_right = 110.0
+offset_bottom = 29.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="btn_jouer" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.631373, 1, 0.627451, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_vsb4k")
+text = "Débuter une partie"
+
+[node name="btn_param" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.631373, 1, 0.627451, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_vsb4k")
+text = "Paramètres"
+
+[node name="btn_quitter" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.631373, 1, 0.627451, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_vsb4k")
+text = "Quitter"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = -50.0
+offset_top = -124.0
+offset_right = 56.0
+offset_bottom = -82.0
+theme_override_font_sizes/font_size = 30
+text = "JEU T3"
+
+[node name="AudioStreamPlayer2D" parent="."]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+physics_interpolation_mode = 0
+auto_translate_mode = 0
+editor_description = ""
+script = null
+
+[connection signal="pressed" from="VBoxContainer/btn_jouer" to="." method="_on_btn_jouer_pressed"]
+[connection signal="pressed" from="VBoxContainer/btn_quitter" to="." method="_on_btn_quitter_pressed"]

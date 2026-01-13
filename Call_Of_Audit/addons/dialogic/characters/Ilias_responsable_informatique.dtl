@@ -1,0 +1,19 @@
+join "Ilias responsable informatique" center
+- Bonjour Ilias, comment allez-vous ? Toujours entrain de faire du C?
+	do Global.AddFear("-10")
+	do Global.UpdateFearBar()
+	audio music "res://music/rmouqueReplique1.mp3" [loop="false"]
+	"Ilias responsable informatique": Bonjour, je vais bien merci ! Et oui vive le C, j'utiliserai ce langage jusqu'à ma mort ! Comment puis-je vous aider ?
+	Pourriez-vous m’expliquer comment vous protégez les données sensibles de vos clients s'il vous plaît ?
+	[voice path="res://music/rmoqueReplique2.mp3" volume="0.0"]
+	"Ilias responsable informatique": Bien sûr, nous les stockons dans une bdd, normalement uniquement accessible par les membres du service informatique. Nous avons toutefois repéré un bug permettant à n’importe quelle personne connectée au réseau de l’entreprise d’y accéder. Nous sommes en train de le corriger.
+	Merci beaucoup pour cette information, à bientôt.
+	[signal arg="ilias_cool"]
+- Bonjour, montrez moi comment  vous protégez les données sensibles de vos clients.
+	do Global.AddFear("25")
+	do Global.UpdateFearBar()
+	audio music "res://music/rmouqeReplique3.mp3" [loop="false"]
+	"Ilias responsable informatique": Bonjour, nous le stockons dans une bdd uniquement accessible par les membres du service informatique.
+	Merci, au revoir.
+	[signal arg="ilias_mauvais"]
+[signal arg="met_npc"]

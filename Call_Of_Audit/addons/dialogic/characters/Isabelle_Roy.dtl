@@ -1,0 +1,13 @@
+- Bonjour Madame, je travaille sur un audit de l'IUT et j’aurais besoin de renseignements concernant la gestion des fiches de paie.
+	do Global.AddFear("-10")
+	do Global.UpdateFearBar()
+	Isabelle_Roy: Les fiches de paie sont centralisées par le service RH et archivées numériquement sur le serveur interne.
+	Très bien au revoir.
+	[signal arg="roy_cool"]
+- Bonjour, donnez moi les fiches de paie du personnel
+	do Global.AddFear("25")
+	do Global.UpdateFearBar()
+	Isabelle_Roy: Je ne peux pas vous donner accès à ce genre d’informations.
+	Très bien au revoir.
+	[signal arg="roy_mauvais"]
+[signal arg="met_npc"]

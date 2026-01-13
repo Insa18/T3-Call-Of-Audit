@@ -1,0 +1,20 @@
+- Bonjour, expliquez moi comment vous protégez le réseau de l'IUT contre de potentielles cyber-attaques.
+	do Global.AddFear("25")
+	do Global.UpdateFearBar()
+	S'il vous plaît! Ne me parlez pas sur ce ton! Vous n'aurez pas d'informations de ma part!
+	- Je vous parle comme j'en ai envie, donnez moi ces documents!
+		Non, vous ne les aurez pas. Partez!
+		J'espère que vous changerez d'avis, au revoir.
+		[signal arg="ayadi_mauvais"]
+	- Excusez moi, j'ai manqué de tact, mais j'ai vraiment besoin de ces documents s'il vous plaît.
+		Tenez, au revoir.
+		[signal arg="ayadi_cool"]
+- Bonjour monsieur Ayadi, vous allez bien?
+	do Global.AddFear("-10")
+	do Global.UpdateFearBar()
+	Je vais très bien merci! Ce matin mes élèves de première année m'ont demandé leurs notes de S11 et je leur ai menti hahahahahahha
+	Vous êtes vraiment un blagueur vous! Pourriez-vous m'expliquer comment vous protégez le réseau de l'IUT contre de potentielles cyber-attaques?
+	Nous utilisons une stratégie de défense en profondeur. Concrètement, cela repose sur trois piliers \: un pare-feu nouvelle génération pour filtrer l'entrée, une segmentation stricte du réseau (VLANs) pour isoler les étudiants de l'administration, et une surveillance active pour détecter les anomalies en temps réel.
+	Merci pour votre réponse. Au revoir et bonne journée!
+	[signal arg="ayadi_cool"]
+[signal arg="met_npc"]

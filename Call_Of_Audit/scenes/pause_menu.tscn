@@ -1,0 +1,38 @@
+[gd_scene load_steps=2 format=3 uid="uid://2wflosx0udcu"]
+
+[ext_resource type="Script" uid="uid://dohi0l8ksuhqo" path="res://scripts/PauseMenu.cs" id="1_n87rw"]
+
+[node name="PauseMenu" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_n87rw")
+
+[node name="ButtonQuit" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -167.0
+offset_top = 76.0
+offset_right = 167.0
+offset_bottom = 195.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Quitter"
+
+[node name="ButtonResume" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -167.0
+offset_top = -164.0
+offset_right = 167.0
+offset_bottom = -45.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Reprendre"
+
+[connection signal="pressed" from="ButtonQuit" to="." method="_on_button_quit_pressed"]
+[connection signal="pressed" from="ButtonResume" to="." method="_on_button_resume_pressed"]
